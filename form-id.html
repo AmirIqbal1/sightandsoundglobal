@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fundraiser ID Search</title>
+	<script>
+		function search() {
+			var validIds = ["1001", "1003", "1005"];
+			var input = document.getElementById("fundraiser_id").value;
+			var message = document.getElementById("message");
+
+			if (validIds.includes(input)) {
+				message.innerHTML = "Yes, this is a fundraiser for Sight and Sound Global.";
+			} else {
+				message.innerHTML = "No, this is not a valid ID.";
+			}
+		}
+	</script>
+</head>
+<body>
+
+	<h1>Fundraiser ID Search</h1>
+
+	<label for="fundraiser_id">Enter Fundraiser ID:</label>
+	<input type="text" id="fundraiser_id">
+	<button type="button" onclick="search()">Search</button>
+
+	<p id="message"></p>
+
+</body>
+</html>
