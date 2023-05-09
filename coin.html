@@ -38,16 +38,16 @@
 
     <script>
 function calculateValue() {
-  const twoPoundsValue = Number((document.getElementById("twoPounds").value * 120 / 1000).toFixed(2));
-  const onePoundValue = Number((document.getElementById("onePound").value * 176 / 1000).toFixed(2));
-  const fiftyPenceValue = Number((document.getElementById("fiftyPence").value * 160 / 1000).toFixed(2));
-  const twentyPenceValue = Number((document.getElementById("twentyPence").value * 250 / 1000).toFixed(2));
-  const tenPenceValue = Number((document.getElementById("tenPence").value * 325 / 1000).toFixed(2));
-  const fivePenceValue = Number((document.getElementById("fivePence").value * 325 / 1000).toFixed(2));
-  const twoPenceValue = Number((document.getElementById("twoPence").value * 356 / 1000).toFixed(2));
-  const onePenceValue = Number((document.getElementById("onePence").value * 356 / 1000).toFixed(2));
+  const twoPoundsValue = Number((document.getElementById("twoPounds").value * (120/1000)).toFixed(2));
+  const onePoundValue = Number((document.getElementById("onePound").value * (176/1000)).toFixed(2));
+  const fiftyPenceValue = Number((document.getElementById("fiftyPence").value * (160/1000)).toFixed(2));
+  const twentyPenceValue = Number((document.getElementById("twentyPence").value * (250/1000)).toFixed(2));
+  const tenPenceValue = Number((document.getElementById("tenPence").value * (325/1000)).toFixed(2));
+  const fivePenceValue = Number((document.getElementById("fivePence").value * (325/1000)).toFixed(2));
+  const twoPenceValue = Number((document.getElementById("twoPence").value * (356/1000)).toFixed(2));
+  const onePenceValue = Number((document.getElementById("onePence").value * (356/1000)).toFixed(2));
 
-  const totalValueInPence = Math.round((twoPoundsValue + onePoundValue + fiftyPenceValue + twentyPenceValue + tenPenceValue + fivePenceValue + twoPenceValue + onePenceValue) * 100);
+  const totalValueInPence = Math.round((twoPoundsValue*100 + onePoundValue*100 + fiftyPenceValue*100 + twentyPenceValue*100 + tenPenceValue*100 + fivePenceValue*100 + twoPenceValue*100 + onePenceValue*100));
 
   const pounds = Math.floor(totalValueInPence / 100);
   const pence = totalValueInPence % 100;
