@@ -38,14 +38,14 @@
 
     <script>
 function calculateValue() {
-  const twoPoundsValue = document.getElementById("twoPounds").value * 2;
-  const onePoundValue = document.getElementById("onePound").value * 1;
-  const fiftyPenceValue = document.getElementById("fiftyPence").value * 0.5;
-  const twentyPenceValue = document.getElementById("twentyPence").value * 0.2;
-  const tenPenceValue = document.getElementById("tenPence").value * 0.1;
-  const fivePenceValue = document.getElementById("fivePence").value * 0.05;
-  const twoPenceValue = document.getElementById("twoPence").value * 0.02;
-  const onePenceValue = document.getElementById("onePence").value * 0.01;
+  const twoPoundsValue = document.getElementById("twoPounds").value * 120 / 1000;
+  const onePoundValue = document.getElementById("onePound").value * 176 / 1000;
+  const fiftyPenceValue = document.getElementById("fiftyPence").value * 160 / 1000;
+  const twentyPenceValue = document.getElementById("twentyPence").value * 250 / 1000;
+  const tenPenceValue = document.getElementById("tenPence").value * 325 / 1000;
+  const fivePenceValue = document.getElementById("fivePence").value * 325 / 1000;
+  const twoPenceValue = document.getElementById("twoPence").value * 356 / 1000;
+  const onePenceValue = document.getElementById("onePence").value * 356 / 1000;
 
   const totalValueInPence = (twoPoundsValue + onePoundValue + fiftyPenceValue + twentyPenceValue + tenPenceValue + fivePenceValue + twoPenceValue + onePenceValue) * 100;
 
