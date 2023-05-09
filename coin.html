@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Coin Value Calculator</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			font-size: 1.5rem;
+			margin: 1rem;
+		}
+
+		form {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 1rem;
+			padding: 1rem;
+			border: 2px solid #ccc;
+			border-radius: 5px;
+		}
+
+		label {
+			font-size: 1rem;
+			margin: 0.5rem;
+			flex-basis: 100%;
+		}
+
+		input[type="number"] {
+			font-size: 1rem;
+			padding: 0.5rem;
+			border-radius: 5px;
+			border: none;
+			margin: 0.5rem;
+			flex-basis: 50%;
+		}
+
+		input[type="button"] {
+			font-size: 1rem;
+			padding: 0.5rem;
+			border-radius: 5px;
+			border: none;
+			background-color: #4CAF50;
+			color: white;
+			margin: 0.5rem;
+			flex-basis: 100%;
+			cursor: pointer;
+		}
+
+		input[type="text"] {
+			font-size: 1rem;
+			padding: 0.5rem;
+			border-radius: 5px;
+			border: none;
+			margin: 0.5rem;
+			flex-basis: 100%;
+		}
+	</style>
+</head>
+<body>
+	<h1>Coin Value Calculator</h1>
+	<form>
+		<label for="twoPoundWeight">£2 coin weight:</label>
+		<input type="number" id="twoPoundWeight" name="twoPoundWeight">
+
+		<label for="onePoundWeight">£1 coin weight:</label>
+		<input type="number" id="onePoundWeight" name="onePoundWeight">
+
+		<label for="fiftyPenceWeight">50 pence weight:</label>
+		<input type="number" id="fiftyPenceWeight" name="fiftyPenceWeight">
+
+		<label for="twentyPenceWeight">20 pence weight:</label>
+		<input type="number" id="twentyPenceWeight" name="twentyPenceWeight">
+
+		<label for="tenPenceWeight">10 pence weight:</label>
+		<input type="number" id="tenPenceWeight" name="tenPenceWeight">
+
+		<label for="fivePenceWeight">5 pence weight:</label>
+		<input type="number" id="fivePenceWeight" name="fivePenceWeight">
+
+		<label for="twoPenceWeight">2 pence weight:</label>
+		<input type="number" id="twoPenceWeight" name="twoPenceWeight">
+
+		<label for="onePenceWeight">1 pence weight:</label>
+		<input type="number" id="onePenceWeight" name="onePenceWeight">
+
+		<input type="button" value="Calculate" onclick="calculateCoinValue()">
+
+		<label for="totalValue">Total value:</label>
+		<input type="text" id="totalValue" name="totalValue>
+    </form>
+<script>
+	function calculateCoinValue() {
+		const twoPoundWeight = document.getElementById("two-pound").value || 0;
+		const onePoundWeight = document.getElementById("one-pound").value || 0;
+		const fiftyPenceWeight = document.getElementById("fifty-pence").value || 0;
+		const twentyPenceWeight = document.getElementById("twenty-pence").value || 0;
+		const tenPenceWeight = document.getElementById("ten-pence").value || 0;
+		const fivePenceWeight = document.getElementById("five-pence").value || 0;
+		const twoPenceWeight = document.getElementById("two-pence").value || 0;
+		const onePenceWeight = document.getElementById("one-pence").value || 0;
+	  
+		const twoPoundValue = twoPoundWeight * 2;
+		const onePoundValue = onePoundWeight;
+		const fiftyPenceValue = fiftyPenceWeight * 0.5;
+		const twentyPenceValue = twentyPenceWeight * 0.2;
+		const tenPenceValue = tenPenceWeight * 0.1;
+		const fivePenceValue = fivePenceWeight * 0.05;
+		const twoPenceValue = twoPenceWeight * 0.02;
+		const onePenceValue = onePenceWeight * 0.01;
+	  
+		const totalValue = twoPoundValue + onePoundValue + fiftyPenceValue + twentyPenceValue + tenPenceValue + fivePenceValue + twoPenceValue + onePenceValue;
+		
+		displayResults(totalValue.toFixed(2));
+	  }
+	  
+	  function displayResults(total) {
+		const resultDiv = document.getElementById("result");
+		resultDiv.innerText = `The total value of your coins is £${total}`;
+	  }
+	  
+</script>
+</body>
+</html>
